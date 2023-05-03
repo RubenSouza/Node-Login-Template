@@ -4,7 +4,7 @@
 </p>
 
 <h4 align="center">
-	🚧  Next JS  🚀 Concluído...  🚧
+	🚧  Node JS  🚀 Em desenvolvimento...  🚧
 </h4>
 
 ---
