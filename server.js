@@ -1,7 +1,14 @@
 const express = require("express");
-const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+const morgan = require("morgan");
+const cors = require("cors");
+const helmet = require("helmet");
+
+//Start express
+
+const app = express();
 
 //.Env files
 
@@ -22,6 +29,24 @@ mongoose
 // JSON
 
 app.use(express.json());
+
+//Helmet
+
+app.use(helmet());
+app.user(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+
+//Morgan
+
+app.use(morgan("common"));
+
+//Body Parser
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+//Cors
+
+app.use(cors());
 
 //Models
 
