@@ -33,7 +33,7 @@ app.use(express.json());
 //Helmet
 
 app.use(helmet());
-app.user(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
+app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 
 //Morgan
 
